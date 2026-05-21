@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #16213e;
+  border-bottom: 1px solid #0f3460;
+}
+
+.toolbar h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e94560;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: #e94560;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #d33a52;
+}
+
+.btn-secondary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #2980b9;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.btn-sm {
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  color: #7f8c8d;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.empty-state p {
+  margin-bottom: 20px;
+}
+
+.groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.terminal-group {
+  background-color: #16213e;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #0f3460;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.group-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.group-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.group-description {
+  color: #95a5a6;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.terminal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.terminal-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background-color: #0f3460;
+  border-radius: 8px;
+}
+
+.terminal-icon {
+  font-size: 18px;
+}
+
+.terminal-info {
+  flex: 1;
+}
+
+.terminal-cwd {
+  font-size: 14px;
+  color: #ecf0f1;
+}
+
+.terminal-command {
+  font-size: 12px;
+  color: #95a5a6;
+  margin-top: 2px;
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dialog {
+  background-color: #16213e;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #0f3460;
+}
+
+.dialog-header h2 {
+  font-size: 18px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #95a5a6;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.dialog-body {
+  padding: 20px;
+}
+
+.input-group {
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #bdc3c7;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0f3460;
+  border-radius: 6px;
+  background-color: #0f3460;
+  color: white;
+  font-size: 14px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #e94560;
+}
+
+.input-group input::placeholder {
+  color: #7f8c8d;
+}
+
+.terminals-section {
+  margin-top: 8px;
+}
+
+.terminals-section h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #bdc3c7;
+}
+
+.terminal-input-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background-color: #0f3460;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.item-number {
+  font-size: 12px;
+  color: #95a5a6;
+  font-weight: 500;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px;
+  border-top: 1px solid #0f3460;
+}

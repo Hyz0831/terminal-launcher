@@ -1,0 +1,33 @@
+{
+  "name": "terminal-launcher",
+  "version": "1.0.0",
+  "description": "Terminal Launcher - A GUI terminal group manager",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "electron": "cross-env NODE_ENV=production electron .",
+    "electron:dev": "concurrently \"npm run dev\" \"powershell -Command \\\"Start-Sleep -Seconds 2; cross-env NODE_ENV=development electron .\\\"\"",
+    "dist": "vite build && electron-builder"
+  },
+  "keywords": [
+    "electron",
+    "terminal",
+    "launcher"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^42.2.0",
+    "electron-builder": "^26.8.1",
+    "vite": "^8.0.13",
+    "wait-on": "^7.2.0"
+  }
+}
